@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html>
+    
+<head>
+    
+    <meta charset="utf-8">
+        <title>DIY RF Microphone - Performance</title>
+        
+     <meta name = "viewport" content = " width=device-width">
+     
+    <link rel="stylesheet" href="main.css">
+   
+</head>
+    
+<body>
+    
+<div class="headboxtop">
+     
+          <img src="images/complete.png"
+          style="float:right;width:21vw;height:auto; padding:1.5vw 2.5vw 1vw 0vw;">
+    
+     
+<h1>RF.AMX10</h1>
+  
+<h2>DIY RF Condenser Microphone <br>Calibration and Performance</h2>
+     
+</div>
+
+    
+<div class="headboxdoc"> 
+        
+        <a href="index.html">
+        <div class="doc"><b>HOME</b></div></a>
+      
+        <a href="index-scheme.html">
+        <div class="doc"><b>SCHEMATIC</b></div></a>
+        
+        <a href="index-parts.html">
+        <div class="doc"><b>PCB/PARTS</b></div></a>
+          
+        <a href="index-construct.html">
+        <div class="doc"><b>CONSTRUCTION</b></div></a>
+            
+                    
+</div>
+
+<hr>
+    
+<div class="bodybox">
+     
+<p>
+         <i>Calibration:</i><br>
+         The most important factor affecting the performance of this microphone is the calibration of the two inductors ...
+         The overall circuitry is simple in concept, but a high quality output signal is heavily reliant on the 'noise free gain' obtained by careful tuning of both T1 and T2. <br>
+         The simplest method of tuning these inductors is by connecting the microphone to a suitable phantom powered microphone pre-amplifier, and then presenting a sinusoidal 1KHz audio tone close to the microphone capsule (either via a loudspeaker or a headphone transducer)<br> The inductor cores can then be adjusted - using a <b><i>non-ferrous </i></b>  trimming tool (plastic or ceramic) - to maximise the audio output into the preamp. The image below illustrates a typical calibration configuration...<br>
+     
+        
+         
+    <img src="images/cal.jpg"
+              style="float:left;width:44vw;height:auto;margin:1vw 4vw 1vw 4vw;border-radius:0.5vw;">
+         
+   
+         It is preferrable to monitor the pre-amp output via headphones... If there is a visual metering option also available ( audio level meter - spectrum analyser, etc) that can make the calibration even simpler - and more accurate.<br>
+         Start by setting both cores near the mid position. Using your<b><i> non-ferrous</i></b> trimmer, turn T1 core until the maximum audio level is achieved. Note that this may well be quite low (until T2 is also calibrated) but it should be possible to detect the maximum signal. <br>
+         Repeat the process with T2. At the optimum core position, the audio output should increase dramatically, giving a clear indication of the final setting.<br> 
+         Note that although there can be several 'peaks and troughs' in audio levels over the tuning range, the optimal setting can clearly be determined as the one with the highest audio output level. <br>
+         Return to T1 and check for maximum gain, and a final 'tweak' of the T2 setting is suggested as well. 
+         <br><br>
+         
+         <i>Performance:</i><br>
+         As I do not have access to a complete range of audio test equipment - and certainly not to an anechoic chamber -  I decided that trying to write a full 'specification' for this microphone was a bit too presumptuous!<br>
+         So I have elected to compare the 'performance' against a known published specification for a commercial microphone -- in this case the series 4 (black) Rode NT1. <br><br>
+         
+         <i>Noise floor:</i> <br>  
+         The RF.AMX10 (v.6.0) has a self noise figure of around 10dB(A).
+         The signal to noise ratio (S/N ratio) of the microphone is thus c.84dB. 
+         <br>
+         When fitted with a K67 capsule, the RF.AMX10 (v.6.0) has a sensitivity of c.-23dB, about 6dB more sensitive than the the new (2014) Rode NT1. That model - with its specified self noise floor at around 4.5dB(A) - is widely regarded as a low noise microphone.  <br> So with its higher sensitivity, the <i>relative</i> noise floor of the RF.AMX10 (v.6.0) is within around 2dB of the Rode NT1, for an identical input signal. <br>
+        
+       
+         <br><br>
+         
+         <i>Frequency response:</i><br>
+         A pink noise source was connected to a Sennheiser headphone transducer, which was then 1/3 octave equalised - as far as possible - to 'mimic' the published Rode NT1 curve. This source was than presented - at a distance of only c.20mm - to both microphones simultaneously.<br> The mics were mounted in a closed box - filled with blankets - to try and minimise external acoustic interference ... The diagram below illustates the comparative results (RF.AMX10 is the blue curve):<br>
+         
+           <img src="images/thdoct.jpg"
+         style="float:left; width:48vw; height:auto; margin:1vw 2vw 1vw 2vw; border-radius:0.5vw;">
+         
+         As might be expected, the K.67 capsule shows some brightness in the mid range, with around a 3dB boost at 4.5KHz. There is also a second HF boost around 8KHz, which is pretty much standard for the cheap K67 type capsules.<br> The HF seems to 'fall off' slightly less steeply than the NT1.<br><br> 
+         The LF response indications are much less reliable, as there was some extreme LF content from the surroundings, but it does appear to indicate a slightly steeper LF roll off than with the NT1.<br> The value of C5 and C10 will determine the exact LF -3dB cut off point, so different values for these may be selected to change the LF response.<br>(It maybe useful to note that the theoretical LF limit for an RF biased microphone is in fact DC... although it is probably undesirable to want to extend LF response that far!) <br><br>
+         The HF response characteristics of the microphone can be modifed by adjusting the values of capacitors C9 and C13...With the values shown, the -3dB HF point is c.16KHz. <br><br>
+         
+        <i>Distortion:</i><br>
+         It has only been possible so far to do comparison tests for distortion, so that a common test set up allows for a comparison to be made between the RF.AMX10 and several other microphones.<br>
+         You can download the results <a href="http://www.jp137.com/lts/Distortion.figures.pdf"><i>HERE</i></a> (It's only a single page download) <br><br>
+         
+         <i>Cardioid pattern:</i><br>
+         The K67 capsule is specified as having a cardioid pattern. When used in the 'end address' configuration - as this example is - access to the rear of the capsule is made via the entire side aspects of the BM800 headbasket. This seems to offer excellent rejection to the side and rear of the mic. Quite what the actual pattern is has yet to be measured more precisely.<br><br>
+         
+         <i>Sample audio:</i><br> 
+      
+         The audio sample linked to here -- 
+         
+</p>
+         
+<div class="headboxdoc3">
+        
+        <audio controls>
+            <source src="samples/RF.AMX10.test.1.wav" type="audio/wav">
+            <source src="samples/RF.AMX10.test.1.ogg" type="audio/ogg">
+            <source src="samples/RF.AMX10.test.1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        
+        </audio>
+        
+</div>
+        
+<p>   
+          -- is a short speech test message using the RF.AMX10 -- It is an unprocessed 'raw' audio file.<br> The only modification has been to apply an 80Hz high pass filter, to remove most of the low frequency 'room rumble' from the recording. It gives an idea of the response of the microphone, and of the residual noise floor component.<br><br>
+            
+        This audio sample here --
+</p>
+    
+<div class="headboxdoc3"> 
+    
+        <audio controls>
+            
+            <source src="samples/RF.amx10.dbx286.wav" type="audio/wav">
+            <source src="samples/RF.amx10.dbx286.ogg" type="audio/ogg">
+            <source src="samples/RF.amx10.dbx286.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        
+        </audio>
+</div>
+    
+<p>
+            
+            -- was recorded via a dbx286s mic pre-amp/processor, and gives an idea of what the RF.AMX10 sounds like as a speech microphone, with a small amount of audio processing added.<br><br>
+        
+        This is a 'raw' sample of acoustic guitar ... no processing at all --
+</p>
+    
+<div class="headboxdoc3"> 
+    
+        <audio controls>
+            
+            <source src="samples/Guit.samp.wav" type="audio/wav">
+            <source src="samples/Guit.samp.ogg" type="audio/ogg">
+            <source src="samples/Guit.samp.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        
+        </audio>
+</div>       
+        
+<p> 
+               
+         For such a simple and low cost version of an 'RF bias' condenser microphone, I think the RF.AMX10 holds up quite well....
+         
+</p> 
+        
+
+<hr>         
+ 
+
+<div class="headboxdoc"> 
+    
+        <a href="index.html">
+        <div class="doc"><b>HOME</b></div></a>
+      
+        <a href="index-scheme.html">
+        <div class="doc"><b>SCHEMATIC</b></div></a>
+        
+        <a href="index-parts.html">
+        <div class="doc"><b>PCB/PARTS</b></div></a>
+          
+        <a href="index-construct.html">
+        <div class="doc"><b>CONSTRUCTION</b></div></a>
+          
+                
+</div>
+    
+<div class="footer">
+        
+        <h3> © RJS ('rogs') 2026 </h3>
+</div>
+     
+</body>
+    
+</html>
